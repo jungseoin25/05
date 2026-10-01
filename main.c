@@ -2,16 +2,23 @@
 
 int main(void)
 {
-    int count = 0;
-    char c;
+    int num1, num2;
+    char op;
+    int res;
 
-    while ((c = getchar()) != '\n')
-    {
-        if (c >= '0' && c <= '9')
-            count++;
-    }
+    printf("Input the calculation:");
+    scanf("%i %c %i", &num1, &op, &num2);
 
-    printf("There are %d digits\n", count);
+    if (op == '+')
+        res = num1 + num2;
+    else if (op == '-')
+        res = num1 - num2;
+    else if (op == '*')
+        res = num1 * num2;
+    else if (op == '/')
+        res = num1 / num2;
+        
+    printf("=%i\n", res);
 
     return 0;
 }
