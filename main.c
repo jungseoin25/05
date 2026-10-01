@@ -2,15 +2,20 @@
 
 int main(void)
 {
-    int n;
+    int num;
+    int sum = 0;
+    int i;
 
-    printf("Enter an integer:");
-    scanf("%i", &n);
+    printf("Input an integer: ");
+    scanf("%i", &num);
 
-    if (n > 0)
-        printf("Absolute value : %i\n", n);
-    else
-        printf("Absolute value : %i\n", -n);
+
+    for (i=0; i<num; i++)
+    {
+        sum = sum + i + 1;
+    }
+
+    printf("Sum result is %i\n", sum);
 
     return 0;
 }
